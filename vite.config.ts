@@ -20,7 +20,8 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, './'),
         },
-        extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+        // Forcer la recherche des extensions dans cet ordre pour éviter les erreurs de résolution
+        extensions: ['.tsx', '.ts', '.jsx', '.js', '.json', '.mjs']
       },
       define: {
         'process.env.API_KEY': JSON.stringify(env.API_KEY),

@@ -1,0 +1,28 @@
+
+name: Quantum H24 Scanner
+
+on:
+  schedule:
+    - cron: '*/15 * * * *' # S'exécute toutes les 15 minutes
+  workflow_dispatch: # Permet de lancer manuellement depuis GitHub
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Run Background Scanner
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_KEY: ${{ secrets.VITE_SUPABASE_KEY }}
+        run: npx tsx scripts/background-scanner.ts

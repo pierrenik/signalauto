@@ -4,7 +4,7 @@
 
 # AutoTrade Systematic V11
 
-Plateforme de Trading Algorithmique V11 avec intégration Gemini AI et Supabase.
+Plateforme de Trading Algorithmique V11 avec intégration Gemini AI et Supabase.cc
 
 ## 🚀 Installation & Démarrage
 
