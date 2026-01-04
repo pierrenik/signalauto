@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import App from './App.tsx';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -23,7 +23,6 @@ if ('serviceWorker' in navigator && window.location.origin.includes('localhost')
         console.log('SW registered: ', registration);
       })
       .catch(registrationError => {
-        // Silencing cross-origin SW errors in sandbox environments
         console.debug('SW registration skipped or failed');
       });
   });

@@ -1,6 +1,10 @@
+
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
-import { SignalsProvider } from './context/SignalsContext';
+// Routes and Route are part of the core react-router library. Re-exports in -dom may be missing in some environments.
+import { Routes, Route } from 'react-router';
+// HashRouter is specific to the web implementation in react-router-dom.
+import { HashRouter } from 'react-router-dom';
+import { SignalsProvider } from './context/SignalsContext.tsx';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import SignalDetails from './pages/SignalDetails';
