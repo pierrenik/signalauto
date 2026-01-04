@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import { Signal, SignalType } from '../types';
 import { ArrowUpRight, ArrowDownRight, Bot, Clock, Target, ShieldAlert, TrendingUp, Crosshair, Percent, Hourglass, Layers, Trash2, Loader2, AlertTriangle, X, Check } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
-// useNavigate is part of react-router core; using it directly to bypass potential re-export issues in react-router-dom.
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { useSignals } from '../context/SignalsContext';
 
 interface Props {

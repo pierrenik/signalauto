@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-// NavLink is a standard export of react-router-dom v6. Using direct import to satisfy environment requirements.
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, Activity, Volume2, VolumeX, Radar, Database, Wifi, WifiOff, AlertTriangle, Settings, ShieldAlert, X, ArrowRight, CloudLightning } from 'lucide-react';
 import { useSignals } from '../context/SignalsContext';

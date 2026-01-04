@@ -23,6 +23,7 @@ if ('serviceWorker' in navigator && window.location.origin.includes('localhost')
         console.log('SW registered: ', registration);
       })
       .catch(registrationError => {
+        // Silencing cross-origin SW errors in sandbox environments
         console.debug('SW registration skipped or failed');
       });
   });

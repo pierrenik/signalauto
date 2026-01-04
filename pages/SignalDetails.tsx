@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-// useParams and useNavigate are core router components; direct import from react-router addresses environment resolution errors.
-import { useParams, useNavigate } from 'react-router';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useSignals } from '../context/SignalsContext';
 import { SignalType } from '../types';
 import { 
